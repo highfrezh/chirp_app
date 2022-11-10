@@ -33,6 +33,11 @@ class User extends Authenticatable
         'remember_token',
     ];
 
+    public function chirps()
+    {
+        return $this->hasMany(Chirp::class);
+    }
+
     /**
      * The attributes that should be cast.
      *
